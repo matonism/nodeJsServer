@@ -1,0 +1,652 @@
+	@font-face {
+	    font-family: "Coolvetica";
+	    src: url(../../fonts/coolvetica.ttf) format("truetype");
+	}
+	@font-face {
+	    font-family: "LemonMilk";
+	    src: url(../../fonts/LemonMilk.otf) format("truetype");
+	}
+	@font-face {
+	    font-family: "ChampagneLimousines";
+	    src: url(../../fonts/Champagne_Limousines.ttf) format("truetype");
+	}
+	body, html{
+/*		height: 100%;
+*/		min-height: 100%;
+		position: relative;
+		    max-width: 100%;
+    overflow-x: hidden;
+
+	}
+	body *{
+/*		position: relative;
+*//*		z-index: 1;
+*/	}
+/*	body{
+		overflow: hidden;
+	}*/
+	.row{
+		text-align: center;
+	}
+
+	.centered-text{
+		text-align: center;
+	}
+
+	.title-bar{
+	    background-color: rgba(200, 200, 200, 1); /* light gray */
+	    background-color: rgba(83, 202, 196, 1); /* light blue */ 
+	    background-color: rgba(0, 0, 0, 1); /* black */ 
+	    height: 50px;
+	    vertical-align: middle;
+/*	    overflow: auto;
+	    overflow-y: hidden;*/
+	    z-index: 1;
+	    width: 100vw;
+	    float: right;
+	    position: fixed;
+
+	}
+
+	.title-bar-over-image{
+	    background-color: rgba(200, 200, 200, 1); /* light gray */
+	    background-color: rgba(83, 202, 196, 1); /* light blue */ 
+	    background-color: rgba(0, 0, 0, 0.5); /* black */ 
+	    height: 50px;
+	    vertical-align: middle;
+/*	    overflow: auto;
+	    overflow-y: hidden*/;
+	    z-index: 1;
+	    width: 100vw;
+	    float: right;
+	    position: fixed;
+
+	}
+
+	.title-bar-row{
+ 		height: 50px;
+	}
+
+	.title-level-text{
+		height: 100%;
+		color: white;
+		font-size: 18px;
+		line-height: 50px;
+		font-weight: bold;
+		text-align: left;
+	}
+	.top-level-text{
+		font-weight: bold;
+		font-size: 24px;
+		color: white;
+		text-shadow: 1px 1px 10px black;
+
+	}
+	.sub-level-text{
+		font-weight: bold;
+		font-size: 14px;
+		color: gray;
+		text-shadow: 1px 1px 10px black;
+	}
+	.content-title{
+		font-size: 20px;
+		color: white;
+		text-shadow: 1px 1px 10px black;
+		font-weight: bold;
+	}
+
+	.content-description{
+		font-size: 16px;
+		color: white;
+		background-color: rgba(0,0,0,0.5);
+		margin: -50px -20px;
+		padding: 50px 20px;
+		font-family: 'Champagne_Limousines', Verdana, Tahoma;
+	}
+
+	.main-about-content{
+		position: absolute;
+		bottom: 10%;
+	}
+	.background-cover{
+		background-image: url('../../images/summer-flop-compressed.jpg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 100vw 100vh;
+		margin-top: -50px;
+		height: 100vh;
+		width: 100vw;
+		z-index: -1;
+		overflow: hidden;
+		position: relative;
+	}
+	.background-screen{
+		height: 100vh;
+		width: 100%;
+		background-color: rgba(255,255,255,0.0);
+		position: relative;
+
+	}
+
+	.quick-link{
+		position: relative;
+		color: gray;
+		height: 50px;
+		vertical-align: middle;
+		line-height: 50px;
+		text-align: center;
+		padding: 0;
+		float: right;
+
+	}
+
+	.login-button{
+		float: right;
+		background-color: rgba(218, 87, 16, 1); /* burnt orange */  
+		height: 50px;
+		color: white;
+		font-size: 18px;
+		line-height: 50px;
+		width: 125px;
+		font-family: 'Champagne_Limousines', Verdana, Tahoma;
+		display: none;
+
+	}	
+
+	.logout-button{
+		float: right;
+		background-color: rgba(218, 87, 16, 1); /* burnt orange */  
+		height: 50px;
+		color: white;
+		font-size: 18px;
+		line-height: 50px;
+		width: 125px;
+		font-family: 'Champagne_Limousines', Verdana, Tahoma;
+		cursor: pointer;
+
+	}
+	.quick-link-button{
+		float: right;
+		height: 50px;
+		color: white;
+		font-size: 18px;
+		line-height: 50px;
+		width: 125px;
+		font-family: 'Champagne_Limousines', Verdana, Tahoma;
+		text-shadow: 1px 1px 10px black;
+
+
+	}
+	.behind-color{
+		background-color: gray;
+		height: 100vh;
+		width: 100vw;
+	}
+
+
+	.triangle {
+		z-index: 5;
+	    position: fixed;
+	    background-color: black;
+	    top: -360px;
+	    left: 0;
+	    right: 0;
+	    width: 200px;
+	    height: 800px;
+	    transform: rotate(63deg);
+	    -webkit-transform: rotate(63deg);
+	    -moz-transform: rotate(63deg);
+	    -o-transform: rotate(63deg);
+	    -ms-transform: rotate(63deg);
+	    border-right: 2px solid #e74c3c;
+	}
+	.triangle-title-text{
+		position: fixed;
+		top: 15px;
+		z-index: 6;
+		width: 225px;
+		text-align: left;
+		font-size: 40px;
+		font-weight: bold;
+		color: white;
+		line-height: 34px;
+		left: 15px;
+		font-family: "LemonMilk", Verdana, Tahoma;
+	}
+	
+	.slant-container{
+		position: relative;
+		color: gray;
+		height: 100px;
+		vertical-align: middle;
+		line-height: 50px;
+		text-align: center;
+		padding: 0;
+		float: left;
+		position: fixed;
+		z-index: 2;
+	}
+
+	.slant{
+		width: 0; 
+		height: 0; 
+		border-right: 400px solid transparent;
+		position: absolute;
+		border-top: 200px solid rgba(83, 202, 196, 1); /* light blue */   		
+		border-top: 200px solid rgba(218, 87, 16, 1); /* burnt orange */   				
+		border-top: 200px solid rgba(0, 0, 0, 1); /* black */   				
+		top: 0;
+		left: 50%;
+		margin-left: -10px;
+		z-index: 2;
+
+	}
+
+	.under-slant{
+		width: 0; 
+		height: 0; 
+		border-right: 404px solid transparent;
+		border-top: 202px solid rgba(218, 87, 16, 1); /* burnt orange */ 	
+		position: absolute;
+		left: 50%;
+		margin-left: -10px;
+		z-index: 1;
+
+	}
+	.page-title-text{
+		position: absolute;
+		top: 15px;
+		z-index: 3;
+		width: 225px;
+		text-align: left;
+		font-size: 40px;
+		font-weight: bold;
+		color: white;
+		line-height: 34px;
+		left: 15px;
+		font-family: "LemonMilk", Verdana, Tahoma;
+	}
+	.down-arrow-container{
+		position: fixed;
+		height: 30px;
+		width: 30px;
+		border-radius: 15px;
+		bottom: 5px;
+		right: 5px;
+
+	}
+	.down-arrow{
+		height: 0px;
+		width: 0px;
+		top: 10px;
+		left: 10px;
+		position: relative;
+		border-right: 15px solid transparent;
+		border-left: 15px solid transparent;
+		border-top: 15px solid rgba(255, 255, 255, 0.9); /* gray */ 
+		margin: auto;	
+	}
+
+	.selected-button{
+		background-color: gray;
+	}
+
+	.attraction-description{
+		font-family: 'Champagne_Limousines', Verdana, Tahoma;
+		font-size: 16px;
+	}
+
+	.bold-text{
+		color: rgba(218, 87, 16, 1); /* burnt orange */ 	
+		font-size: 30px;
+		font-family: 'Champagne_Limousines', Verdana, Tahoma;
+	}
+
+	.follow-text{
+		font-size: 26px;
+		font-family: 'Champagne_Limousines', Verdana, Tahoma;
+	}
+	
+
+	.footer{
+/*		margin-left: -15px;
+*//*		margin-right: -15px;*/
+		position: absolute;
+		bottom: 0px;
+		background-color: black;
+		border-top: 2px solid rgba(218, 87, 16, 1); 
+		color: white; 
+		width: 100vw;
+	}
+
+	.footer-top-border{
+		margin-right: 0; 
+		margin-left: 0; 
+		height: 10px; 
+		background-color: rgba(218, 87, 16, 1);
+	}
+
+	.footer-container{
+		margin: auto 0px; 
+		width: 100vw;
+	}
+
+	.footer-inner-container{
+		margin-right: 0; 
+		margin-left: 0; 
+		height: 80px; 
+		margin-top: 10px;
+	}
+
+	.footer-header{
+		font-size: 20px; 
+		font-family: 'LemonMilk', Verdana, Tahoma; 
+		overflow: hidden;
+	}
+
+	.footer-content{
+		overflow: hidden;
+	}
+
+	.create-team-button{
+		text-align: center;
+		padding: 10px 25px;
+		border-radius: 10px;
+		margin: 0px 2px;
+		width: 200px;
+		border: 2px solid rgba(218, 87, 16, 1); 
+		color: rgba(218, 87, 16, 1);
+		font-size: 20px;
+	}
+
+	.join-team-button{
+		text-align: center;
+		padding: 10px 25px;
+		border-radius: 10px;
+		margin: 0px 2px;
+		width: 200px;
+		border: 2px solid rgba(0, 0, 0, 0.8); 
+		color: rgba(0, 0, 0, 0.8);
+		font-size: 20px;
+		cursor: pointer;
+	}
+
+	.cancel-join-team-button{
+		text-align: center;
+		padding: 10px 25px;
+		border-radius: 10px;
+		margin: 0px 2px;
+		width: 200px;
+		border: 2px solid rgba(0, 0, 0, 0.8); 
+		color: rgba(0, 0, 0, 0.8);
+		font-size: 20px;
+		cursor: pointer;
+		display: none;
+	}
+
+	.photo-thumbnail-title{
+		text-align: left;
+		font-family: "LemonMilk", Verdana, Tahoma;
+		font-size: 26px;
+		
+	}
+
+	.photo-thumbnail-description{
+		text-align: left;
+		font-family: 'Champagne_Limousines', Verdana, Tahoma;
+		font-size: 16px;
+		overflow: hidden;
+	}
+
+	.beersbee-photo{
+		background-image: url('../../images/beersbee-icon-green.png');
+		background-size: 150px 150px;
+
+	}
+
+	.kickball-photo{
+		background-image: url('http://placehold.it/150x150');
+		background-size: 150px 150px;
+
+	}
+
+	.garbage-can-pong-photo{
+		background-image: url('../../images/beer-pong-icon.png');
+		background-size: 150px 150px;
+
+	}
+
+	.slip-n-slide-photo{
+		background-image: url('../../images/flip-cup-icon-red.png');
+		background-size: 150px 150px;
+
+	}
+
+	.dizzy-bat-photo{
+		background-image: url('../../images/bat-icon-blue.png');
+		background-size: 150px 150px;
+
+	}
+
+	.tent-photo{
+		background-image: url('../../images/tent-icon.png');
+		background-size: 150px 150px;
+	}
+
+	.sideways-keg-photo{
+		height: 300px; 
+		background-image: url('../../images/sideways-keg-icon.png'); 
+		background-size: 361px 300px; 
+		background-position: center; 
+		background-repeat: no-repeat;
+	}
+
+	.photo-thumbnail{
+		height: 150px;
+		width: 150px;
+	}
+
+	.line-break{
+		width: 100%; 
+		border-bottom: 2px solid rgba(218, 87, 16, 1);
+	}
+
+	.keg-count-label{
+		color: white;
+		padding-left: 70px; 
+		padding-top: 90px; 
+		font-size: 30px; 
+		text-align: center; 
+/*		text-shadow: 1px 1px 10px black; 
+*/		font-family: "LemonMilk", Verdana, Tahoma;
+	}
+
+	.keg-count-value{
+		color: white;
+		padding-left: 70px; 
+		margin-top: -10px; 
+		font-size: 60px; 
+		text-align: center; 
+		font-weight: bold;
+/*		text-shadow: 1px 1px 10px black; 
+*/		font-family: "LemonMilk", Verdana, Tahoma;
+	}
+
+	.donation-description{
+		font-size: 20px; 
+		color: black;
+	}
+
+	.tent-section{
+		border-top: 2px solid rgba(218, 87, 16, 1);  
+		padding-bottom: 25px;
+	}
+
+	.tent-description-container{
+		height: 150px; 
+		position: relative;
+	}
+
+	.tent-description{
+		font-size: 20px; 
+		position: absolute; 
+		top: auto; 
+		padding-top: 20px;
+	}
+
+	.dropdown-backdrop{
+		position: static;
+	}
+
+	.dropdown-style{
+		position: relative;
+	}
+
+	.dropdown-login-toggle-style{
+		color: white; 
+		text-decoration: none;
+	}
+
+	.dropdown-logout-toggle-style{
+		color: white;
+		text-decoration: none; 
+		height: 100%; 
+		width: 100%;
+	}
+
+	.dropdown-login-menu-style{
+		padding: 15px; 
+		padding-bottom: 0px; 
+		right: 0; 
+		left: auto; 
+		width: 300px; 
+		z-index: 4;
+	}
+
+	.dropdown-logout-menu-style{
+		padding: 0px 15px; 
+		padding-bottom: 0px; 
+		right: 0; 
+		left: auto; 
+		width: 200px; 
+		z-index: 4;
+	}
+
+	.dropdown-username-display{
+		color: black; 
+		border-bottom: 1px solid black; 
+		text-align: center;
+	}
+
+	.dropdown-logout-text{
+		height: 100%; 
+		width: 100%;"
+	}
+
+	.dropdown-username-style{
+		margin-bottom: 10px;
+	}
+
+	.dropdown-password-style{
+		margin-bottom: 10px;
+	}
+
+	.dropdown-login-button{
+		width: 40%; 
+		height: 32px; 
+		font-size: 13px; 
+		margin-right: 10px;
+	}
+
+	.table-title{
+		font-size: 24px;
+		color: rgba(218, 87, 16, 1);
+		text-align: left;
+	}
+
+	.countdown-timer{
+		padding-top: 10px;
+		color: rgba(218, 87, 16, 1);
+		font-size: 30px;
+		font-family: "Champagne_Limousines", Verdana, Tahoma;
+		text-align: center;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+		padding-bottom: 10px;
+
+
+	}
+
+	.black-text{
+		color:white;
+	}
+
+	.white-text{
+		color: black;
+	}
+
+	.team-detail-page-title{
+		font-family: "LemonMilk", Verdana, Tahoma;
+		font-size: 36px;
+		display: inline-block;
+	}
+
+	.team-feature-label{
+		font-family: "Champagne_Limousines", Verdana, Tahoma;
+		text-align: center;
+		font-size: 24px;
+		color: black;
+
+	}
+
+	.team-feature-description{
+		font-family: "Champagne_Limousines", Verdana, Tahoma;
+		font-size: 18px;
+	}
+
+	.update-team-field-input{
+		width: 150px;
+		margin-right: 10px;
+		display: inline-block;
+	}
+
+	.team-link{
+		cursor: pointer;
+		text-decoration: underline;
+	}
+
+	.join-leave-team-actions{
+		text-align: center;
+		display: inline-block;
+	}
+	.edit-team-actions{
+		text-align: center;
+		display: inline-block;
+	}
+	.edit-team-button{
+		display: inline-block;
+		color: rgba(218, 87, 16, 1);
+		text-decoration: underline;
+		cursor: pointer;
+		font-size: 16px;
+	}
+	.edit-team-actions{
+		width: 150px;
+		display: inline-block;
+		text-align: left;
+		margin-left: 10px;
+	}
+	.team-feature-value{
+		color: black;
+	}
+
+	.team-actions-save{
+		margin-top: -15px;
+		background-color: rgba(218, 87, 16, 1);
+	}
+
+	.team-actions-cancel{
+		margin-top: -15px;
+	}
+	
+	

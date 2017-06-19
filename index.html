@@ -1,0 +1,289 @@
+<html>
+
+<head>
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+	<link rel="stylesheet" href="../utilities/css/uspcss.css">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js">
+	</script>
+	<script src="../utilities/js/helperFunctions.js"></script>	
+	<script src="../utilities/js/resizeFunctions.js"></script>
+	<script src="../utilities/js/ajaxCallHelper.js"></script>
+	<script src="../utilities/js/login.js"></script>
+	<script src="../utilities/js/countdownTimer.js"></script>
+	<script src="about.js"></script>
+
+	<link rel="icon" 
+	type="image/png" 
+	href="../images/beachBall.png">
+	<title>Ultimate Summer Party</title>
+</head>
+
+<body>
+
+
+	<div class="triangle"></div>
+	<div class="triangle-title-text">
+		Ultimate <br/>Summer <br/>Party
+	</div>
+
+	<div class="container-fluid">
+
+		<div class="row title-bar-row">
+			<div class="title-bar-over-image">
+				<div class="col-xs-12 col-md-12 quick-link-bar">
+					<div class="row">
+
+						<div class='login-button' id="login-button">
+
+							<div class="dropdown dropdown-style">
+								<a class="dropdown-toggle dropdown-login-toggle-style" href="#" data-toggle="dropdown">Log In <strong class="caret"></strong></a>
+								<div class="dropdown-menu dropdown-login-menu-style">
+
+
+									<form action="../utilities/php/login.php" id="loginForm" method="post" accept-charset="UTF-8">
+										<input type="username" class="form-control dropdown-username-style" id="login-username"name="login-username" aria-describedby="usernameHelp" placeholder="Username">
+										<input type="password" class="form-control dropdown-password-style" id="login-password" name="login-password" placeholder="Password">
+										<input class="btn btn-primary dropdown-login-button" type="submit" name="commit" value="Sign In" />
+										<a href="../createAccount">
+											Create an account
+										</a>
+									</form>
+
+
+								</div>
+							</div>
+						</div>
+
+						<div class='logout-button' id="logout-button">
+
+							<div class="dropdown dropdown-style">
+								<a class="dropdown-toggle dropdown-logout-toggle-style" href="#" data-toggle="dropdown">       
+									<div class="dropdown-logout-text">
+										Account <strong class="caret"></strong>
+									</div>
+								</a>
+
+
+								<div class="dropdown-menu dropdown-logout-menu-style">
+									<div id='username-display' class="dropdown-username-display">username</div>
+									<div class="centered-text">
+										<a class="dropdown-item logout-action" href="#">Log Out</a>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+
+						<a href="../teams">
+							<div class='quick-link-button'>
+								Teams
+							</div>
+						</a>
+
+						<a href="../events">
+							<div class='quick-link-button'>
+								Events
+							</div>
+						</a>
+
+						<a href="../">
+							<div class='quick-link-button'>
+								About
+							</div>
+						</a>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+		<div class="row">
+			
+			<div class="background-cover fill-remaining-space">
+				<div class='col-xs-12 main-about-content'>
+					
+					<div class="row">
+
+						<div class="col-xs-8 col-xs-offset-2">
+							<div class="content-description">
+								The Ultimate Summer Party is an all day celebration of summer and competition.  This is an event for heroes by heroes. Cowards are not welcome. Scroll to learn more...
+							</div>
+
+							<br/>
+							<br/>
+							<br/>
+							<div class="down-arrow"></div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div id="countdown" class="col-xs-12 countdown-timer"></div>
+		</div>
+		<br/>
+		<br/>
+
+
+		<div class="row">
+			<div class="col-xs-offset-1 col-xs-10">
+
+				<span class="bold-text">What: </span>
+				<span class="follow-text">The Ultimate Summer Party&trade;</span>
+				<br/>
+
+				<span class="bold-text">When: </span>
+				<span class="follow-text">July 8th @ 1:00PM EST</span>
+				<br/>
+
+				<span class="bold-text">Where: </span>
+				<span class="follow-text">Richie's House</span>
+				<br/>
+
+				<span class="bold-text">Who: </span>
+				<span class="follow-text">At least 100 heroes</span>
+<!-- 				<br/>
+
+				<span class="bold-text">Schedule: </span>
+				<span class="follow-text">Coming Soon</span> -->
+
+			</div>
+		</div>
+		
+
+
+		<br/>
+		<br/>
+		<br/>
+
+		<div class="row">
+			<div class="col-xs-4">
+				<img src="../images/grill-circle.png" height="150px;" />
+				<br/>
+				<br/>
+				<div class="attraction-description">
+					There will be multiple open grills for a BYOM (bring your own meat) cookout
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<img src="../images/canoe-circle.png" height="150px;" />
+				<br/>
+				<br/>
+				<div class="attraction-description">
+					The venue includes a 300 foot private pond open for unlimited swimming, fishing, and canoeing 
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<img src="../images/bonfire-circle.png" height="150px;" />
+				<br/>
+				<br/>
+				<div class="attraction-description">
+					The event concludes with a bonfire-lit closing ceremony for those true heroes who conquer the day's events
+				</div>
+			</div>
+		</div>
+
+
+		<div class="colored-background-section">
+
+			<div class="row">
+				
+				<br/>
+				<div class="col-xs-offset-2 col-xs-8">
+					<div class="sideways-keg-photo">
+						<div class="photo-thumbnail-title keg-count-label">
+							Keg Count
+						</div>
+						<div class="photo-thumbnail-title keg-count-value">
+							2
+						</div> 
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="row">
+			<div class=" col-xs-offset-2 col-xs-8" >				
+				<div class="donation-description">
+					We strongly encourage participants to bring their own drinks, but we hope to provide as well.  However paying for over 100 heroes is no small feat. So we decided to have as many kegs as the people want.  We've opened the <a target="_blank" href="https://venmo.com" style="font-weight: bold;">Ultimate Summer Party Venmo Account</a> <a target="_blank" href="https://venmo.com/Ultimate-Summer-Party">(@Ultimate-Summer-Party)</a> to fund this venture.  Donate as much as you want to drink and we'll handle the rest.
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+
+
+
+
+		<div class="row tent-section">
+			
+			<br/>
+			<div class="col-xs-2 col-xs-offset-2">
+				<div class="photo-thumbnail tent-photo" >
+				</div>
+			</div>
+			<div class="col-xs-6 tent-description-container">				
+				<div class="photo-thumbnail-description bold-text tent-description">
+					This is an all-day/all-night event. Guests are welcome to stay the night, but make sure to bring <span style="font-weight: bold; color: rgba(218, 87, 16, 1);">tents and sleeping gear</span> as it is also an all-outdoor event
+				</div>
+			</div>
+
+
+		</div>
+
+
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+
+
+		<div class="row">
+
+			<div class="footer">
+				<div class="footer-container">
+					<div class="row footer-top-border">
+					</div>
+					<div class="row footer-inner-container">
+						<div class="col-xs-12">
+							<div class="footer-header">
+								Ultimate Summer Party&trade; 2017
+							</div>
+							<div class="footer-content">
+								Rich Matonis | 216-633-2334 &#9679; Mike Matonis | 216-406-8704 <br/>
+								ultimatesummerpartyseries@gmail.com
+							</div>
+
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
